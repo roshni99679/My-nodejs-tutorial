@@ -1,0 +1,16 @@
+{
+  "name": "npm_in_nodejs",
+  "version": "1.0.0",
+  "description": "My node Tutorial",
+  "main": "npm_modules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roshni Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-styles": "^6.1.0",
+    "chalk": "^5.0.0",
+    "validator": "^13.7.0"
+  }
+}
