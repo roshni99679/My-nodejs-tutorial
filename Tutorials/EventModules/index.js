@@ -13,10 +13,16 @@ const event=new EventEmmiter();
 
 //ex1. event is fired only one time using 'once'-----------------------------------------------------
 //event definition should be written first
-event.on('sayMyName' ,()=>{
-    console.log("Your name is Rosshhhh.......")
+event.on('WaterFull' ,()=>{
+    console.log("Turn off the motor..........")
+    //setTimeOut runs after 1000ms ,when everything is done
+    setTimeout(()=>{
+        console.log("Gentle Reminder,Turn off the motor..........")
+    },1000);
 })
-event.emit('sayMyName');
+console.log("Script is running.")
+event.emit('WaterFull');
+console.log("Script is still running........")
 
 
 

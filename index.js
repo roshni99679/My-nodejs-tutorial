@@ -15,3 +15,5 @@ console.log(names)
 //nodemon -v (to see version)
 //to run file : nodemon index.js(everytime you will save file youll see op in terminal without typing nodemon index.js again)
 //to exit nodemon : ctrl+c (twice)
+
+//best website to learn node :https://nodejs.dev/learn

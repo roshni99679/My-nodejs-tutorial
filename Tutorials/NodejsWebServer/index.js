@@ -19,6 +19,7 @@
 const http=require("http");
 const fs=require('fs');
 
+
 const server=http.createServer((req,res)=>{
 
     const data=fs.readFileSync("./userApi/userapi.json" , 'utf-8');
@@ -26,8 +27,10 @@ const server=http.createServer((req,res)=>{
 
     console.log(req.url);
     if (req.url=="/"){
+        res.statusCode=200;
         res.end("Hello from home, Rossssshhhhh...........")
     }else if(req.url=="/about"){
+        res.statusCode=200;
         res.end("Hello from about, Rossssshhhhh...........")
     }else if(req.url=="/userapi"){
         res.writeHead(200, {"content-type":"application/json"})
@@ -38,6 +41,7 @@ const server=http.createServer((req,res)=>{
         //     res.end(orgdata[0].name);
         // });
     }else if(req.url=="/contact"){
+        res.statusCode=200;
         res.end("Hello from contact, Rossssshhhhh...........")
         // res.write("Hello from contact, Rossssshhhhh...........") :works the same as res.end()
     }else{
@@ -57,4 +61,12 @@ server.listen(8000,"127.0.0.1",()=>{
 //op:Hello from other side Rossssshhhhh...........
 
 
+// const port=process.env.PORT||3000;
+// const servers=http.createServer((req,res)=>{
+//     res.setHeader("Content-Type","text/html")
+//     res.end("<h1>Hello</h1><p>I am Rosh...............</p>")
+// })
 
+// servers.listen(()=>{
+//     console.log(`listening at port ${port}`)
+// })
